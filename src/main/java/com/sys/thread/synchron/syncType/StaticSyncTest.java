@@ -1,4 +1,4 @@
-package com.sys.thread.synchron;
+package com.sys.thread.synchron.syncType;
 
 /**
  * Created by klp on 2018/8/21
@@ -19,5 +19,4 @@ public class StaticSyncTest {
 
         }
     }
-
 }
