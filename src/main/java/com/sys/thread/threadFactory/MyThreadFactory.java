@@ -31,20 +31,6 @@ public class MyThreadFactory {
 
 	@Test
 	public void testSendTask() {
-		final MyThreadFactory factory = new MyThreadFactory();
-		for (int i = 0; i < 10; i++) {
-			new Thread() {
-				@Override
-				public void run() {
-					factory.sendTask();
-				}
-			};
-		}
-		try {
-			factory.executor.awaitTermination(5, TimeUnit.SECONDS);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		System.out.println(Runtime.getRuntime().availableProcessors());
 	}
 }
