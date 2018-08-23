@@ -1,10 +1,17 @@
 package com.sys.concurrent;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 public class CopyOnWriteMap<K, V> implements Map<K, V>, Cloneable {
+
+	private volatile Map<K, V> internalMap;
+
+	public CopyOnWriteMap() {
+		internalMap = new HashMap<K, V>();
+	}
 
 	public int size() {
 
@@ -27,13 +34,16 @@ public class CopyOnWriteMap<K, V> implements Map<K, V>, Cloneable {
 	}
 
 	public V get(Object key) {
-
-		return null;
+		return internalMap.get(key);
 	}
 
 	public V put(K key, V value) {
-
-		return null;
+		synchronized (this) {
+			Map<K, V> newMap = new HashMap<K, V>(internalMap);
+			V val = newMap.put(key, value);
+			internalMap = newMap;
+			return val;
+		}
 	}
 
 	public V remove(Object key) {
@@ -42,7 +52,11 @@ public class CopyOnWriteMap<K, V> implements Map<K, V>, Cloneable {
 	}
 
 	public void putAll(Map<? extends K, ? extends V> m) {
-
+		synchronized (this) {
+			Map<K, V> newMap = new HashMap<K, V>(internalMap);
+			newMap.putAll(m);
+			internalMap = newMap;
+		}
 	}
 
 	public void clear() {
