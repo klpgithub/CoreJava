@@ -4,13 +4,17 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * jdk官方例子,没有运行成功,可能理解有问题
+ * Created by klp on 2018年8月27日上午9:38:58.
+ */
 public class ConditionTest {
 
 	final Lock lock = new ReentrantLock();
 	final Condition notFull = lock.newCondition();
 	final Condition notEmpty = lock.newCondition();
 
-	final Object[] items = new Object[0];
+	final Object[] items = new Object[100];
 
 	int putptr = 0, takeptr = 0, count = 0;
 

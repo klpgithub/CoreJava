@@ -4,6 +4,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicStampedReference;
 
+/**
+ * 用AtomicStampedReference解决ABA问题(当需要知道数据被改变几次时使用)
+ * Created by klp on 2018年8月27日上午9:48:07.
+ */
 public class AtomicStampedReferenceTest {
 
 	private static AtomicInteger atomicInteger = new AtomicInteger(100);
