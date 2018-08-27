@@ -7,8 +7,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 使用ReentrantLock和Condition实现【生产者-消费者】
- * Created by klp on 2018年8月24日下午5:24:29.
+ * 使用ReentrantLock和Condition实现【生产者-消费者】 Created by klp on 2018年8月24日下午5:24:29.
  */
 public class ProducerConsumerSolutionUsingLock {
 
