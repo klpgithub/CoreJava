@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buses>
+	<bus>
+		<dist>15465</dist>
+		<time>35</time>
+		<foot_dist>162</foot_dist>
+		<last_foot_dist>162</last_foot_dist>
+		<segments>
+			<segment name="地铁1号线(升仙湖-广都)">
+				<start_stat>火车北站</start_stat>
+				<end_stat>天府广场</end_stat>
+				<stats>火车北站;人民北路;文殊院;骡马市;天府广场</stats>
+				<line_dist>7005</line_dist>
+				<foot_dist>0</foot_dist>
+			</segment>
+			<segment name="地铁2号线(龙泉驿-犀浦)">
+				<start_stat>天府广场</start_stat>
+				<end_stat>茶店子客运站</end_stat>
+				<stats>天府广场;人民公园;通惠门;中医大省医院;白果林;蜀汉路东;一品天下;羊犀立交;茶店子客运站</stats>
+				<line_dist>8298</line_dist>
+				<foot_dist>0</foot_dist>
+			</segment>
+		</segments>
+	</bus>
+	<bus>
+		<dist>9131</dist>
+		<time>34</time>
+		<foot_dist>402</foot_dist>
+		<last_foot_dist>0</last_foot_dist>
+		<segments>
+			<segment name="86路(北湖公交站-茶店子公交站)">
+				<start_stat>火车北站东</start_stat>
+				<end_stat>茶店子公交站</end_stat>
+				<stats>
+					火车北站东;人民北路二段北;人民北路;西北桥;一环路九里堤路口西;沙湾;西门车站;营门口立交桥东;五里村;茶店子;茶店子西口;茶店子公交站
+				</stats>
+				<line_dist>8729</line_dist>
+				<foot_dist>402</foot_dist>
+			</segment>
+		</segments>
+	</bus>
+</buses>
