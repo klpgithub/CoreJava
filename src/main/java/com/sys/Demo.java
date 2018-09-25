@@ -15,6 +15,13 @@ public class Demo {
 		System.out.println(x.length);
 		System.out.println(i);
 
+		// 二维数组定义
+		int a[][];
+		int[][] b;
+		int c[][] = new int[4][];
+		int d[][] = new int[3][4];
+
+		System.out.println(fact(5));
 	}
 
 	public static int testTryFinally() {
@@ -26,6 +33,25 @@ public class Demo {
 			return 0;
 		} finally {
 			return 2;
+		}
+	}
+
+	// 阶乘1
+	static long fact(int n) {
+		int i;
+		long f = 1;
+		for (i = 1; i <= n; i++) {
+			f = f * i;
+		}
+		return f;
+	}
+
+	// 阶乘2
+	static long fact2(int n) {
+		if (n == 1) {
+			return 1;
+		} else {
+			return n * fact2(n - 1);
 		}
 	}
 

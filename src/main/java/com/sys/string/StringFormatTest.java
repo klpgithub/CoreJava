@@ -1,4 +1,4 @@
-package com.sys.string.format;
+package com.sys.string;
 
 import org.junit.Test;
 
@@ -22,6 +22,17 @@ public class StringFormatTest {
 		System.out.printf("上面价格的指数和浮点数结果的长度较短的是：%g %n", 50 * 0.85);
 		System.out.printf("8.5折表示为: %d%% %n", 85);
 		System.out.printf("字母A的散列码:%h  %n", 'A');
+	}
+
+	@Test
+	public void testReplace() {
+		String string = "This Is A Demo";
+		String s1 = string.toLowerCase();
+		System.out.println("s1 = " + s1);
+		StringBuffer sb = new StringBuffer(string);
+		System.out.println(sb.length());
+		StringBuffer sb2 = sb.replace(2, 4, "asdsa");
+		System.out.println("sb2 = " + sb2);
 	}
 
 }
