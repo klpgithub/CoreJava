@@ -10,6 +10,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
@@ -37,7 +38,7 @@ public class MySwing extends JFrame {
 		setSize(500, 500);
 		getContentPane().setLayout(null);
 		setVisible(true);
-
+		
 		add(getUserJlabel("用户名:"));
 		add(getTextField());
 		add(getPWDJLabel("密码:"));
