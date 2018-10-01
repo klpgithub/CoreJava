@@ -22,6 +22,7 @@ public class Demo {
 		int d[][] = new int[3][4];
 
 		System.out.println(fact(5));
+		System.out.println(1/2);
 	}
 
 	public static int testTryFinally() {
