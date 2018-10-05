@@ -53,6 +53,16 @@ public class ArraySearch {
 		return -1;
 	}
 
+	public static int findMaxIndex(int[] arr) {
+		int index = 0;
+		for (int i = 1, j = arr.length; i < j; i++) {
+			if (arr[index] < arr[i]) {
+				index = i;
+			}
+		}
+		return index;
+	}
+
 	public static void main(String[] args) {
 
 		int pow = (int) Math.pow(2, 31);
@@ -65,6 +75,9 @@ public class ArraySearch {
 
 		int search = findLastEqual(new int[] { 1, 2, 5, 5, 5, 7, 11, 15 }, 5);
 		System.out.println(search);
+
+		int index = findMaxIndex(new int[] { 1, 5, 2, 6, 77, 43, 9, 0 });
+		System.out.println(index);
 
 	}
 
